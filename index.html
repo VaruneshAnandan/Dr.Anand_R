@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dr.Anand R |Portfolio </title>
+  <title>Dr. Anand R | Hyperspectral Imaging & Remote Sensing Research</title>
   
   <link rel="icon" href="a.png" type="image/png">
 
@@ -43,7 +43,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 8, 20, 0.85); /* Slightly darker for better mobile contrast */
+      background: rgba(0, 8, 20, 0.85);
       z-index: -2;
     }
 
@@ -497,7 +497,7 @@
 
     .project-item:last-child { border-bottom: none; }
 
-    .project-item:before, .card li:not(.project-item):before {
+    .project-item:before, .card li:not(.project-item):before, .publication-item::before {
       content: '▸';
       position: absolute;
       left: 0;
@@ -522,17 +522,21 @@
     .publication-list .publication-item {
          padding: 15px 0;
          border-bottom: 1px dashed rgba(0, 180, 216, 0.2);
-         display: flex;
-         gap: 10px;
+         display: block; /* Changed for bullet alignment */
+         position: relative;
+         padding-left: 30px;
     }
     .publication-list .publication-item:last-child { border-bottom: none; }
+    
+    .publication-item::before {
+        top: 15px; /* Align bullet with top of text */
+        font-size: 20px;
+    }
 
-    .pub-number {
-      min-width: 25px;
-      font-weight: 600;
-      color: #00b4d8;
-      text-align: right;
-      flex-shrink: 0;
+    .pub-venue {
+        display: block;
+        margin-top: 5px;
+        color: #90e0ef;
     }
 
     .research-highlight {
@@ -750,6 +754,7 @@
     <a class="nav-link" data-tab="skills">Skills</a>
     <a class="nav-link" data-tab="research">Research</a>
     <a class="nav-link" data-tab="projects">Projects</a>
+    <a class="nav-link" data-tab="student-projects">Student Projects</a>
     <a class="nav-link" data-tab="publications">Publications</a>
     <a class="nav-link" data-tab="talks">Talks</a>
     <a class="nav-link" data-tab="awards">Awards</a>
@@ -1037,6 +1042,29 @@
     </section>
   </div>
 
+  <div id="student-projects" class="tab-content">
+    <section class="section">
+      <h2 class="section-title">Student Projects</h2>
+      <p class="section-subtitle">Innovative projects mentored under my guidance</p>
+      
+      <div class="grid">
+        <div class="card grid-span-full">
+          <h3><span class="card-icon">👨‍🎓</span>Mentored Projects</h3>
+          <ul>
+            <li class="project-item">
+              <span class="project-text"><b>High fidelity ECG noise cancellation</b><br>
+              <span style="font-size: 0.95em; color: #90e0ef; display: block; margin-top: 5px;">Team: Varunesh Anandan, Sharan, Sanjay, Lingesh</span></span>
+            </li>
+            <li class="project-item">
+              <span class="project-text"><b>MRI Classification</b><br>
+              <span style="font-size: 0.95em; color: #90e0ef; display: block; margin-top: 5px;">Team: Rahul, Priya, Karthik, Sneha</span></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
   <div id="publications" class="tab-content">
     <section class="section">
       <h2 class="section-title">Publications & Research Impact</h2>
@@ -1103,161 +1131,138 @@
           <h3><span class="card-icon">📚</span>Journal Articles</h3>
           <div class="publication-list">
               <div class="publication-item">
-                <div class="pub-number">1.</div>
                 <div class="pub-content">
                   Raju, A., Boopathy, S., Karthi, N., Saravanan, P., Sudarsan, R., & Rajendran, S., "Soil Nutrient Estimation from Hyperspectral Data Using FOX-Based Band Selection and Machine Learning: A Case Study in Radhapuram, Tirunelveli, India, with PRISMA Applications," <span class="pub-venue"><i>AgriEngineering</i>, 2025.</span>
                 </div>
               </div>
 
               <div class="publication-item">
-                 <div class="pub-number">2.</div>
                  <div class="pub-content">
                    Aravinth J, Anand R, "A Deep Learning Model for Integrating Landsat-8 and Sentinel 2 Satellite Images to Improve the Spatiotemporal Fusion Network for Drought Monitoring," <span class="pub-venue"><i>IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing</i>, 2025.</span>
                  </div>
                </div>
                
                <div class="publication-item">
-                 <div class="pub-number">3.</div>
                  <div class="pub-content">
                    R. Anand, "Quantum-enhanced soil nutrient estimation exploiting hyperspectral data with quantum Fourier transform," <span class="pub-venue"><i>IEEE Geoscience and Remote Sensing Letters</i>, 2025.</span>
                  </div>
                </div>
 
                <div class="publication-item">
-                 <div class="pub-number">4.</div>
                  <div class="pub-content">
                    A. Raju and S. Samiappan, "Feature extraction in 5G wireless systems: A quantum cat swarm and wavelet-based approach," <span class="pub-venue"><i>Future Internet</i>, vol. 17, no. 5, p. 188, 2025.</span>
                  </div>
                </div>
 
                <div class="publication-item">
-                 <div class="pub-number">5.</div>
                  <div class="pub-content">
                    J. Ramasamy, A. Raju, K. Krishnasamy Ranganathan, et al., "Battle royale optimization for optimal band selection in predicting soil nutrients using visible and near-infrared reflectance spectroscopy and PLSR algorithm," <span class="pub-venue"><i>Journal of Imaging</i>, vol. 11, no. 3, p. 83, 2025.</span>
                  </div>
                </div>
 
                <div class="publication-item">
-                 <div class="pub-number">6.</div>
                  <div class="pub-content">
                    R. Anand, J. Andrew, and I. Makki, "Optimizing land mine detection across diverse mining environments: A hyperspectral data approach with regression models," <span class="pub-venue"><i>International Journal of Intelligent Networks</i>, 2024.</span>
                  </div>
                </div>
 
                <div class="publication-item">
-                 <div class="pub-number">7.</div>
                  <div class="pub-content">
                    R. Anand, S. V. Lakshmi, D. Pandey, and B. K. Pandey, "An enhanced ResNet-50 deep learning model for arrhythmia detection using electrocardiogram biomedical indicators," <span class="pub-venue"><i>Evolving Systems</i>, vol. 15, no. 1, pp. 83–97, 2024.</span>
                  </div>
                </div>
 
                <div class="publication-item">
-                 <div class="pub-number">8.</div>
                  <div class="pub-content">
                    R. Anand, S. Samiappan, and K. Kavitha, "Flower pollination optimization based hyperspectral band selection using modified wavelet Gabor deep filter neural network," <span class="pub-venue"><i>Infrared Physics & Technology</i>, p. 105215, 2024.</span>
                  </div>
                </div>
 
                <div class="publication-item">
-                 <div class="pub-number">9.</div>
                  <div class="pub-content">
                    R. Anand, S. Samiappan, and M. Prabukumar, "Fine-tuning digital FIR filters with gray wolf optimization for peak performance," <span class="pub-venue"><i>Scientific Reports</i>, vol. 14, no. 1, p. 12675, 2024.</span>
                  </div>
                </div>
 
                <div class="publication-item">
-                 <div class="pub-number">10.</div>
                  <div class="pub-content">
                    J. Aravinth, R. Anand, and S. Samiappan, "Multilinear compressive learning and reconstruction of hyperspectral data with U-Net architecture for enhanced spectral imaging," <span class="pub-venue"><i>Digital Signal Processing</i>, p. 104740, 2024.</span>
                  </div>
                </div>
 
                <div class="publication-item">
-                 <div class="pub-number">11.</div>
                  <div class="pub-content">
                    R. Anand, B. Khan, V. K. Nassa, et al., "Hybrid convolutional neural network (CNN) for Kennedy Space Center hyperspectral image," <span class="pub-venue"><i>Aerospace Systems</i>, vol. 6, no. 1, pp. 71–78, 2023.</span>
                  </div>
                </div>
 
                <div class="publication-item">
-                 <div class="pub-number">12.</div>
                  <div class="pub-content">
                    S. Jayapoorani, D. Pandey, N. Sasirekha, R. Anand, and B. K. Pandey, "Systolic optimized adaptive filter architecture designs for ECG noise cancellation by Vertex-5," <span class="pub-venue"><i>Aerospace Systems</i>, vol. 6, no. 1, pp. 163–173, 2023.</span>
                  </div>
                </div>
 
                <div class="publication-item">
-                 <div class="pub-number">13.</div>
                  <div class="pub-content">
                    A. Raju and R. Subramoniam, "Assessing soil nutrient content and mapping in tropical Tamil Nadu, India, through PRISMA hyperspectral mission applications," <span class="pub-venue"><i>Applied Sciences</i>, vol. 14, no. 1, p. 186, 2023.</span>
                  </div>
                </div>
 
                <div class="publication-item">
-                 <div class="pub-number">14.</div>
                  <div class="pub-content">
                    R. Anand, S. Samiaappan, S. Veni, E. Worch, and M. Zhou, "Airborne hyperspectral imagery for band selection using moth–flame metaheuristic optimization," <span class="pub-venue"><i>Journal of Imaging</i>, vol. 8, no. 5, p. 126, 2022.</span>
                  </div>
                </div>
 
                <div class="publication-item">
-                 <div class="pub-number">15.</div>
                  <div class="pub-content">
                    T. Shanthi, M. Paramasivam, C. Prakash, et al., "Robust fabric defects inspection system using deep learning architecture," <span class="pub-venue"><i>Journal of Testing and Evaluation</i>, vol. 50, no. 1, pp. 646–655, 2022.</span>
                  </div>
                </div>
 
                <div class="publication-item">
-                 <div class="pub-number">16.</div>
                  <div class="pub-content">
                    R. Anand, P. Kalkeseetharaman, N. N. Kumar, and B. Sasipreetham, "Real time people flow counter and estimation using deep learning," <span class="pub-venue"><i>International Journal of Intelligence and Sustainable Computing</i>, vol. 1, no. 3, pp. 203–211, 2021.</span>
                  </div>
                </div>
 
                <div class="publication-item">
-                 <div class="pub-number">17.</div>
                  <div class="pub-content">
                    R. Anand, S. Veni, P. Geetha, and S. R. Subramoniam, "Extended morphological profiles analysis of airborne hyperspectral image classification using machine learning algorithms," <span class="pub-venue"><i>International Journal of Intelligent Networks</i>, vol. 2, pp. 1–6, 2021.</span>
                  </div>
                </div>
 
                <div class="publication-item">
-                 <div class="pub-number">18.</div>
                  <div class="pub-content">
                    R. Anand, S. Veni, and J. Aravinth, "Robust classification technique for hyperspectral images based on 3D-discrete wavelet transform," <span class="pub-venue"><i>Remote Sensing</i>, vol. 13, no. 7, p. 1255, 2021.</span>
                  </div>
                </div>
 
                <div class="publication-item">
-                 <div class="pub-number">19.</div>
                  <div class="pub-content">
                    T. Shanthi, R. Sabeenian, K. Manju, M. Paramasivam, P. Dinesh, and R. Anand, "Fundus image classification using hybridized GLCM features and wavelet features," <span class="pub-venue"><i>ICTACT Journal on Image and Video Processing</i>, vol. 11, no. 3, pp. 2372–2375, 2021.</span>
                  </div>
                </div>
 
                <div class="publication-item">
-                 <div class="pub-number">20.</div>
                  <div class="pub-content">
                    R. Anand, T. Shanthi, R. Sabeenian, and S. Veni, "Real time noisy dataset implementation of optical character identification using CNN," <span class="pub-venue"><i>International Journal of Intelligent Enterprise</i>, vol. 7, no. 1–3, pp. 67–80, 2020.</span>
                  </div>
                </div>
 
                <div class="publication-item">
-                 <div class="pub-number">21.</div>
                  <div class="pub-content">
                    J. V. Pranav, R. Anand, T. Shanthi, K. Manju, S. Veni, and S. Nagarjun, "Detection and identification of COVID-19 based on chest medical image by using convolutional neural networks," <span class="pub-venue"><i>International Journal of Intelligent Networks</i>, vol. 1, pp. 112–118, 2020.</span>
                  </div>
                </div>
 
                <div class="publication-item">
-                 <div class="pub-number">22.</div>
                  <div class="pub-content">
                    R. Sabeenian, M. Paramasivam, and R. Anand, "Efficient gold tree child items classification system using deep learning," <span class="pub-venue"><i>Journal of Advanced Research in Dynamical and Control Systems</i>, vol. 12, pp. 1845–1859, 2020.</span>
                  </div>
                </div>
 
                <div class="publication-item">
-                 <div class="pub-number">23.</div>
                  <div class="pub-content">
                    T. Shanthi, R. Sabeenian, and R. Anand, "Automatic diagnosis of skin diseases using convolution neural network," <span class="pub-venue"><i>Microprocessors and Microsystems</i>, vol. 76, p. 103074, 2020.</span>
                  </div>
@@ -1269,147 +1274,126 @@
           <h3><span class="card-icon">🎤</span>Conference Proceedings</h3>
           <div class="publication-list">
               <div class="publication-item">
-                 <div class="pub-number">1.</div>
                  <div class="pub-content">
                    A. Raju, "Tree counting and classification of different level of trees using machine learning algorithms," <span class="pub-venue"><i>AIP Conference Proceedings</i>, vol. 2915, 2024.</span>
                  </div>
               </div>
 
               <div class="publication-item">
-                 <div class="pub-number">2.</div>
                  <div class="pub-content">
                    R. Anand, R. Sabeenian, S. Ganesh Kumar, V. Logeshwaran, and B. Soundarrajan, "AI-based real time object measurement using YOLO v5 algorithm," <span class="pub-venue"><i>Machine Intelligence Techniques for Data Analysis and Signal Processing</i>, Springer, 2023.</span>
                  </div>
               </div>
 
               <div class="publication-item">
-                 <div class="pub-number">3.</div>
                  <div class="pub-content">
                    R. Anand, M. Paramasivam, R. Sabeenian, P. Dinesh, and E. Paul, "Color-to-grayscale conversion for images with non-uniform chromatic distribution using multiple regression," <span class="pub-venue"><i>3rd EAI International Conference on Big Data Innovation for Sustainable Cognitive Computing</i>, Springer Nature, 2022.</span>
                  </div>
               </div>
 
               <div class="publication-item">
-                 <div class="pub-number">4.</div>
                  <div class="pub-content">
                    A. Raju, M. Mahendiran, and S. S. Ahmed, "Newfangled 3D human pose estimation using MediaPipe with foreground object detection," <span class="pub-venue"><i>AIP Conference Proceedings</i>, vol. 2640, 2022.</span>
                  </div>
               </div>
 
               <div class="publication-item">
-                 <div class="pub-number">5.</div>
                  <div class="pub-content">
                    A. Raju, T. Saravanan, and J. V. Arul, "AI based face recognition system using FaceNet deep learning architecture," <span class="pub-venue"><i>AIP Conference Proceedings</i>, vol. 2640, 2022.</span>
                  </div>
               </div>
 
               <div class="publication-item">
-                 <div class="pub-number">6.</div>
                  <div class="pub-content">
                    T. Shanthi, R. Anand, S. Annapoorani, and N. Birundha, "Analysis of phonocardiogram signal using deep learning," <span class="pub-venue"><i>International Conference on Innovative Computing and Communications</i>, Springer, 2022.</span>
                  </div>
               </div>
 
               <div class="publication-item">
-                 <div class="pub-number">7.</div>
                  <div class="pub-content">
                    R. Anand, T. Shanthi, C. Dinesh, S. Karthikeyan, M. Gowtham, and S. Veni, "AI based birds sound classification using convolutional neural networks," <span class="pub-venue"><i>IOP Conference Series: Earth and Environmental Science</i>, vol. 785, 2021.</span>
                  </div>
               </div>
 
               <div class="publication-item">
-                 <div class="pub-number">8.</div>
                  <div class="pub-content">
                    R. Anand, V. Sowmya, E. Gopalakrishnan, K. Soman, et al., "Modified VGG deep learning architecture for COVID-19 classification using bio-medical images," <span class="pub-venue"><i>IOP Conference Series: Materials Science and Engineering</i>, vol. 1084, 2021.</span>
                  </div>
               </div>
 
               <div class="publication-item">
-                 <div class="pub-number">9.</div>
                  <div class="pub-content">
                    R. Sabeenian, M. Paramasivam, P. Selvan, et al., "Gold tree sorting and classification using support vector machine classifier," <span class="pub-venue"><i>Advances in Machine Learning and Computational Intelligence</i>, Springer, 2021.</span>
                  </div>
               </div>
 
               <div class="publication-item">
-                 <div class="pub-number">10.</div>
                  <div class="pub-content">
                    T. Shanthi, R. Anand, K. Hareesh, M. Jagan, V. Baskar, and T. Bhanu, "Automatic social distance monitoring system using deep learning algorithms," <span class="pub-venue"><i>IOP Conference Series: Earth and Environmental Science</i>, vol. 785, 2021.</span>
                  </div>
               </div>
 
               <div class="publication-item">
-                 <div class="pub-number">11.</div>
                  <div class="pub-content">
                    S. Veni, R. Anand, D. Mohan, and E. Paul, "Feature fusion in multimodal emotion recognition system for enhancement of human–machine interaction," <span class="pub-venue"><i>IOP Conference Series: Materials Science and Engineering</i>, vol. 1084, 2021.</span>
                  </div>
               </div>
 
               <div class="publication-item">
-                 <div class="pub-number">12.</div>
                  <div class="pub-content">
                    S. Veni, R. Anand, D. Mohan, and P. Sreevidya, "Leaf recognition and disease detection using content based image retrieval," <span class="pub-venue"><i>2021 7th International Conference on Advanced Computing and Communication Systems (ICACCS)</i>, IEEE, 2021.</span>
                  </div>
               </div>
 
               <div class="publication-item">
-                 <div class="pub-number">13.</div>
                  <div class="pub-content">
                    S. Veni, R. Anand, D. Mohan, and P. Sreevidya, "LiDAR based lane-change assistance for motor vehicle," <span class="pub-venue"><i>2021 7th International Conference on Advanced Computing and Communication Systems (ICACCS)</i>, IEEE, 2021.</span>
                  </div>
               </div>
 
               <div class="publication-item">
-                 <div class="pub-number">14.</div>
                  <div class="pub-content">
                    S. Veni, R. Anand, and B. Santosh, "Road accident detection and severity determination from CCTV surveillance," <span class="pub-venue"><i>Advances in Distributed Computing and Machine Learning</i>, Springer, 2021.</span>
                  </div>
               </div>
 
               <div class="publication-item">
-                 <div class="pub-number">15.</div>
                  <div class="pub-content">
                    S. Veni, A. K. Sameera, V. Samuktha, and R. Anand, "A robust approach using fuzzy logic for the calories evaluation of fruits," <span class="pub-venue"><i>2021 8th International Conference on Signal Processing and Integrated Networks (SPIN)</i>, IEEE, 2021.</span>
                  </div>
               </div>
 
               <div class="publication-item">
-                 <div class="pub-number">16.</div>
                  <div class="pub-content">
                    R. Anand, T. Shanthi, M. Nithish, and S. Lakshman, "Face recognition and classification using GoogLeNet architecture," <span class="pub-venue"><i>Soft Computing for Problem Solving: SocProS 2018</i>, Volume 1, Springer, 2020.</span>
                  </div>
               </div>
 
               <div class="publication-item">
-                 <div class="pub-number">17.</div>
                  <div class="pub-content">
                    S. Veni, R. Anand, and D. Vivek, "Driver assistance through geo-fencing, sign board detection and reporting using Android smartphone," <span class="pub-venue"><i>Soft Computing for Problem Solving: SocProS 2018</i>, Volume 2, Springer, 2020.</span>
                  </div>
               </div>
 
               <div class="publication-item">
-                 <div class="pub-number">18.</div>
                  <div class="pub-content">
                    R. Sabeenian, M. Paramasivam, R. Anand, and P. Dinesh, "Palm-leaf manuscript character recognition and classification using convolutional neural networks," <span class="pub-venue"><i>Computing and Network Sustainability: Proceedings of IRSCNS 2018</i>, Springer, 2019.</span>
                  </div>
               </div>
 
               <div class="publication-item">
-                 <div class="pub-number">19.</div>
                  <div class="pub-content">
                    R. Anand, S. Veni, and J. Aravinth, "Big data challenges in airborne hyperspectral image for urban landuse classification," <span class="pub-venue"><i>2017 International Conference on Advances in Computing, Communications and Informatics (ICACCI)</i>, IEEE, 2017.</span>
                  </div>
               </div>
 
               <div class="publication-item">
-                 <div class="pub-number">20.</div>
                  <div class="pub-content">
                    K. R. Kumar, R. Anand, and R. Gandhiraj, "Implementation of noise cancellation using least mean square in GNU Radio," <span class="pub-venue"><i>2017 International Conference on Computer Communication and Informatics (ICCCI)</i>, IEEE, 2017.</span>
                  </div>
               </div>
 
               <div class="publication-item">
-                 <div class="pub-number">21.</div>
                  <div class="pub-content">
                    R. Anand, S. Veni, and J. Aravinth, "An application of image processing techniques for detection of diseases on brinjal leaves using K-means clustering method," <span class="pub-venue"><i>2016 International Conference on Recent Trends in Information Technology (ICRTIT)</i>, IEEE, 2016.</span>
                  </div>
@@ -1421,49 +1405,42 @@
           <h3><span class="card-icon">📖</span>Books & Book Chapters</h3>
           <div class="publication-list">
               <div class="publication-item">
-                <div class="pub-number">1.</div>
                 <div class="pub-content">
                   P. Iyyanar, R. Anand, T. Shanthi, et al., "A real-time smart sewage cleaning UAV assistance system using IoT," <span class="pub-venue"><i>Handbook of Research on Data-Driven Mathematical Modeling in Smart Cities</i>, IGI Global, 2023.</span>
                 </div>
               </div>
 
               <div class="publication-item">
-                <div class="pub-number">2.</div>
                 <div class="pub-content">
                   K. Manju, R. Anand, B. K. Pandey, et al., "Determination of early onset glaucoma using OCT image," <span class="pub-venue"><i>Handbook of Research on Thrust Technologies' Effect on Image Processing</i>, IGI Global, 2023.</span>
                 </div>
               </div>
 
               <div class="publication-item">
-                <div class="pub-number">3.</div>
                 <div class="pub-content">
                   T. Shanthi, R. Anand, B. K. Pandey, et al., "Exudate detection in fundus images using deep learning algorithms," <span class="pub-venue"><i>Handbook of Research on Thrust Technologies' Effect on Image Processing</i>, IGI Global, 2023.</span>
                 </div>
               </div>
 
               <div class="publication-item">
-                <div class="pub-number">4.</div>
                 <div class="pub-content">
                   R. Anand, S. Veni, and P. Geetha, "Hybrid 3D-CNN based airborne hyperspectral image classification with extended morphological profiles features," <span class="pub-venue"><i>Modeling, Simulation and Optimization: Proceedings of CoMSO 2021</i>, Springer, 2022.</span>
                 </div>
               </div>
 
               <div class="publication-item">
-                <div class="pub-number">5.</div>
                 <div class="pub-content">
                   R. Anand, T. Shanthi, R. Sabeenian, and S. Veni, "GLCM feature-based texture image classification using machine learning algorithms," <span class="pub-venue"><i>Smart Computer Vision</i>, Springer, 2022.</span>
                 </div>
               </div>
 
               <div class="publication-item">
-                <div class="pub-number">6.</div>
                 <div class="pub-content">
                   S. Ganesan, R. Anand, V. Sowmya, and K. Soman, "Initial stage identification of COVID-19 using capsule networks," <span class="pub-venue"><i>Smart Computer Vision</i>, Springer, 2022.</span>
                 </div>
               </div>
 
               <div class="publication-item">
-                <div class="pub-number">7.</div>
                 <div class="pub-content">
                   A. Raju and S. Thirunavukkarasu, "Convolutional neural network demystified for a comprehensive learning with industrial application," <span class="pub-venue"><i>Dynamic Data Assimilation – Beating the Uncertainties</i>, IntechOpen, 2020.</span>
                 </div>
